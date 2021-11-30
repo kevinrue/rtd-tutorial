@@ -1,8 +1,8 @@
 Welcome to the Sims pipelines documentation!
 ============================================
 
-The Sims pipelines use [ruffus](http://www.ruffus.org.uk/)
-and [cgat-core](https://cgat-core.readthedocs.io/en/latest/)
+The Sims pipelines use `ruffus <http://www.ruffus.org.uk/>`
+and `cgat-core <https://cgat-core.readthedocs.io/en/latest/>`
 to write and execute bioinformatics workflows locally or on
 high-performance computing (HPC) clusters.
 
