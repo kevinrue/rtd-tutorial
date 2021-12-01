@@ -4,6 +4,9 @@ Working with the template pipeline
 This page describes how to work with the template pipeline,
 `pipeline_template <https://github.com/sims-lab/pipeline_template/>`_.
 
+That repository provides a boilerplate for rapidly setting up GitHub repositories
+for new production pipelines.
+
 Getting started
 ---------------
 
@@ -29,6 +32,8 @@ which will generate a new repository on your personal account
 (or the one of your choosing).
 This is the repository you will import on Read the Docs,
 and it contains the following files and sub-directories:
+
+.. _template structure:
 
 ``.github/workflows/build.yml``
   Sub-directory that contains instructions for GitHub Action workflows.
@@ -212,3 +217,21 @@ while green or red icons indicate successful completion or failure, respectively
 If you click on the :guilabel:`Details` link -- while it is running or after completion --
 you will access the build logs.
 When the status checks pass and you are satisfied, you can merge the pull request!
+
+Where to go from here
+~~~~~~~~~~~~~~~~~~~~~
+
+At this point, you have a working copy of a minimal pipeline that uses its own files
+ as input data to compute a word count and load the results in an SQLite database.
+
+You will want to edit the files in the `template structure`_ to replace their contents with
+your own pipeline steps, set the default configuration of your pipeline,
+and declare the dependencies that must be present in the Conda environments used to
+run and test the pipeline.
+
+More resources will be added shortly to this documentation to continue learning
+about the Sims pipelines:
+
+* Best practices and recommendations
+* Code styling
+* ... and more!

@@ -26,14 +26,14 @@ How-to Guides
 These guides will help walk you through specific use cases
 related to developing the templates of pipelines themselves.
 
-* :doc:`/guides/pipeline_template`
+* :doc:`/guides/template`
   
-* :doc:`/guides/production_pipelines`
+* :doc:`/guides/production`
 
 .. toctree::
  :maxdepth: 2
  :hidden:
  :caption: How-to Guides
 
- /guides/pipeline_template
- /guides/production_pipelines
+ /guides/template
+ /guides/production

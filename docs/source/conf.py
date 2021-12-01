@@ -17,6 +17,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx.ext.intersphinx",
+    "sphinx.ext.autosectionlabel",
 ]
 
 intersphinx_mapping = {
@@ -33,3 +34,7 @@ html_theme = "sphinx_rtd_theme"
 
 # -- Options for EPUB output
 epub_show_urls = "footnote"
+
+# -- Options for extension "sphinx.ext.autosectionlabel"
+# Make sure the target is unique
+autosectionlabel_prefix_document = True
