@@ -116,3 +116,38 @@ of commands run during the GitHub Action workflow, and their outputs.
    and the environment in which the workflow is executed.
    We also encourage pipeline developers to implement unit tests that validate the 
    outputs of the pipeline.
+
+Basic configuration changes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can now proceed to make some basic configuration adjustments.
+Navigate back to the project repository and click on the :guilabel:`Settings`
+button, which will open the Settings page.
+
+First of all, click on the :guilabel:`Branches` menu,
+and then the :guilabel:`Add rule` button.
+
+* Set "Branch name" to ``main``.
+* Tick the checkbox "Require a pull request before merging".
+* Untick the checkbox "Require approvals".
+* Tick the checkbox "Require status checks to pass before merging".
+* In the search bar below, type "build" and select all of the options that appear (e.g. ``build (3.8)``, ``build (3.9)``).
+* Tick the checkbox "Require linear history".
+* Tick the checkbox "Include administrators".
+* Click the :guilabel:`Create` button.
+* Type your GitHub account password, if prompted.
+
+.. note::
+
+   The template repository includes a branch ``main`` that is used to initialise
+   your copy of the template. Branch protection rules ensure that contributors
+   to the repository respect certain best practices when publishing new updates
+   to the repository.
+   
+   In this instance, we make sure that no one (including
+   administrators) can commit directly to the branch ``main``. Instead, every
+   contribution must be made through a branch and a pull request.
+   We also block pull requests from being merged until the selected status checks pass.
+   Finally, we require a linear history on the branch ``main``, meaning that
+   pull requests must be merge using either the "rebase" or the "squash" strategy,
+   resulting in a much more readable Git history on the branch ``main``.
