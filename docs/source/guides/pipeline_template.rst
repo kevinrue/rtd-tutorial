@@ -69,3 +69,28 @@ and it contains the following files and sub-directories:
    :alt: GitHub template for the tutorial
 
    Template pipeline on GitHub
+
+First steps
+-----------
+
+Checking the first build
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+GitHub will automatically try to run the GitHub Action workflows
+of your project right after you create it.
+To see the build logs, click on the orange circle icon next to
+the commit ID on the project repository,
+or alternatively navigate to the "Action" page,
+then open the one on top (the most recent one).
+
+If the build has not finished yet by the time you open it,
+you will see a yellow indicator, meaning that it is still
+in progress. However, even the logs of builds in progress
+can be viewed as they are being produced.
+
+.. figure:: /_static/images/guides/template-first-successful-build.png
+   :width: 80%
+   :align: center
+   :alt: First successful build
+
+   First successful build
