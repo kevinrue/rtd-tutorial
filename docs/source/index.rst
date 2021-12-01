@@ -20,3 +20,21 @@ Contents
 
    usage
    api
+
+How-to Guides
+-------------
+
+These guides will help walk you through specific use cases
+related to developing the templates of pipelines themselves.
+
+* :doc:`/guides/pipeline_template`
+  
+* :doc:`/guides/production_pipelines`
+
+.. toctree::
+ :maxdepth: 2
+ :hidden:
+ :caption: How-to Guides
+
+ /guides/pipeline_template
+ /guides/production_pipelines
