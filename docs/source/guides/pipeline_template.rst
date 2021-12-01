@@ -160,13 +160,8 @@ allowing you to verify that status checks pass before you merge the changes to t
 main branch of the repository.
 
 To demonstrate this, navigate to your GitHub repository, locate the file ``README.md``,
-and click the |:pencil2:| icon on the top-right with the tooltip "Edit this file"
+and click the pencil icon on the top-right with the tooltip "Edit this file"
 to open a web editor.
-
-To enable that functionality, first click on the :guilabel:`Advanced Settings` link on the left
-under the :guilabel:`⚙ Admin` menu, check the "Build pull requests for this project" checkbox,
-and click the :guilabel:`Save` button at the bottom of the page
-(more information `on their documentation`__).
 
 __  https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/editing-files-in-your-repository
 
