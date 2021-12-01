@@ -63,7 +63,7 @@ and it contains the following files and sub-directories:
   adding new tasks, importing new modules, and managing the overall 
   workflow feeding the output of some task as the input to others.
 
-.. figure:: /_static/images/tutorial/github-template.png
+.. figure:: /_static/images/guides/github-template.png
    :width: 80%
    :align: center
    :alt: GitHub template for the tutorial
