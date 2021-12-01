@@ -1,8 +1,19 @@
-Working with the template pipeline
-==================================
+Using production pipelines
+==========================
 
-This page describes how to work with the template pipeline,
-`pipeline_template <https://github.com/sims-lab/pipeline_template/>`_.
+This page describes how to use a production pipelines to process data.
+
+Production pipelines provide tried and tested bioinformatics workflows
+that are ready to be used for processing data sets.
+Using the example of `pipeline_rnaseq_hisat2 
+<https://github.com/sims-lab/pipeline_rnaseq_hisat2>`_,
+this guide demonstrates how to set up and use a production pipeline
+for any suitable data set.
+
+However, production pipelines are also subject to change,
+following updates to dependencies and best practices in the field.
+As a separate use case, another part of this guide also demonstrates
+how to fork and contribute back to the parent repository.
 
 Getting started
 ---------------
@@ -11,18 +22,21 @@ Preparing your project on GitHub
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To start, `sign in to GitHub <https://github.com/login>`_
-and navigate to `the template pipeline <https://github.com/sims-lab/pipeline_template/>`_,
-where you will see a green :guilabel:`Use this template` button.
-Click it to open a new page that will ask you for some details:
+and navigate to the repository of the production pipeline, e.g.
+`pipeline_rnaseq_hisat2 <https://github.com/sims-lab/pipeline_rnaseq_hisat2/>`_.
+Click the green button :guilabel:`Use this template` to make a working copy
+of the pipeline for your project:
 
 * Leave the default "Owner", or change it to something better for a tutorial project.
-* Introduce an appropriate "Repository name", for example ``pipeline_tutorial``.
-* Make sure the project is "Public", rather than "Private".
+* Introduce an appropriate "Repository name", for example ``pipeline_rnaseq_tutorial``.
+* Feel free to choose whether to make your repository "Public" or "Private".
 
 .. note::
 
    The template repository includes a GitHub Action workflow for continuous integration.
-   Public repositories do not have any usage limit on GitHub Action, but private repositories do.
+   That workflow is only relevant to testing the pipeline during development
+   and maintenance. You will not need it for using the pipeline, and a section below
+   demonstrates how to disable GitHub Action on your repository.
 
 After that, click on the green :guilabel:`Create repository from template` button,
 which will generate a new repository on your personal account
