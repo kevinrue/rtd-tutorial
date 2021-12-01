@@ -160,13 +160,8 @@ allowing you to verify that status checks pass before you merge the changes to t
 main branch of the repository.
 
 To demonstrate this, navigate to your GitHub repository, locate the file ``README.md``,
-and click the |:pencil2:| icon on the top-right with the tooltip "Edit this file"
+and click the pencil icon on the top-right with the tooltip "Edit this file"
 to open a web editor.
-
-To enable that functionality, first click on the :guilabel:`Advanced Settings` link on the left
-under the :guilabel:`⚙ Admin` menu, check the "Build pull requests for this project" checkbox,
-and click the :guilabel:`Save` button at the bottom of the page
-(more information `on their documentation`__).
 
 __  https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/editing-files-in-your-repository
 
@@ -180,10 +175,24 @@ __  https://docs.github.com/en/github/managing-files-in-a-repository/managing-fi
 In the editor, in the first line, replace the two occurences of ``sims-lab/pipeline_template``
 by the name of your own repository (e.g. ``kevinrue/pipeline_tutorial``).
 
+.. note::
+
+   We are editing the code that represents the status check of a GitHub Action workflow,
+   to display the status of your own repository.
+   The full line representing the badge can be obtained as follows:
+
+   * Navigate to your GitHub repository
+   * Click on the :guilabel:`Actions` tab at the top of the page.
+   * Click on the :guilabel:`CI` workflow in the left pane.
+   * Click on the :guilabel:`...` button in the top right corner of the main pane.
+   * Click on the "Create status badge" option.
+   * Click on the :guilabel:`Copy status badge Markdown` button.
+   * You can then paste this as-is, typically at the top of your ``README.md`` file.
+
 Write an appropriate commit message,
 and notice that the "Create a **new branch** for this commit and start a pull request" option
 is already selected (due to the branch protection rule that we set earlier).
-Type a name of the new branch, or use the proposed name.
+Type a name for the new branch, or use the proposed name.
 When you are done, click the green :guilabel:`Propose changes` button,
 which will take you to the new pull request page,
 and there click the :guilabel:`Create pull request` button below the description.
