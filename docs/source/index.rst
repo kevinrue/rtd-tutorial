@@ -27,7 +27,7 @@ How-to Guides
 These guides will help walk you through specific use cases
 related to developing the templates of pipelines themselves.
 
-* **For `pipeline_template` <https://github.com/sims-lab/pipeline_template>_**:
+* **For `pipeline_template <https://github.com/sims-lab/pipeline_template>`_**:
   :doc:`/guides/pipeline_template`
 
 * **For production pipelines**:
