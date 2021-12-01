@@ -38,5 +38,5 @@ related to developing the templates of pipelines themselves.
  :hidden:
  :caption: How-to Guides
 
-/guides/pipeline_template
-/guides/production_pipelines
+ /guides/pipeline_template
+ /guides/production_pipelines
