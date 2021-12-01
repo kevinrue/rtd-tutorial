@@ -19,7 +19,6 @@ Contents
 .. toctree::
 
    usage
-   api
 
 How-to Guides
 -------------
