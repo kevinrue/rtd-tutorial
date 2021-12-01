@@ -110,7 +110,8 @@ of commands run during the GitHub Action workflow, and their outputs.
 
 .. note::
 
-   The logs of GitHub Action workflows are extremely valuable in the case of failure.
+   The logs of GitHub Action workflows are extremely valuable in the case of failure,
+   for debugging and fixing the pipeline (or the GitHub Action workflow itself).
    Some of the steps in the workflow report information about the Conda installation,
    and the environment in which the workflow is executed.
    We also encourage pipeline developers to implement unit tests that validate the 
