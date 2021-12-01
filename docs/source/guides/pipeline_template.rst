@@ -151,3 +151,55 @@ and then the :guilabel:`Add rule` button.
    Finally, we require a linear history on the branch ``main``, meaning that
    pull requests must be merge using either the "rebase" or the "squash" strategy,
    resulting in a much more readable Git history on the branch ``main``.
+
+Trigger a build from a pull request
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The GitHub Action workflow automatically triggers builds from GitHub pull requests,
+allowing you to verify that status checks pass before you merge the changes to the
+main branch of the repository.
+
+To demonstrate this, navigate to your GitHub repository, locate the file ``README.md``,
+and click the |:pencil2:| icon on the top-right with the tooltip "Edit this file"
+to open a web editor.
+
+To enable that functionality, first click on the :guilabel:`Advanced Settings` link on the left
+under the :guilabel:`⚙ Admin` menu, check the "Build pull requests for this project" checkbox,
+and click the :guilabel:`Save` button at the bottom of the page
+(more information `on their documentation`__).
+
+__  https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/editing-files-in-your-repository
+
+.. figure:: /_static/images/guides/gh-edit.png
+   :width: 80%
+   :align: center
+   :alt: File view on GitHub before launching the editor
+
+   File view on GitHub before launching the editor
+
+In the editor, in the first line, replace the two occurences of ``sims-lab/pipeline_template``
+by the name of your own repository (e.g. ``kevinrue/pipeline_tutorial``).
+
+Write an appropriate commit message,
+and notice that the "Create a **new branch** for this commit and start a pull request" option
+is already selected (due to the branch protection rule that we set earlier).
+Type a name of the new branch, or use the proposed name.
+When you are done, click the green :guilabel:`Propose changes` button,
+which will take you to the new pull request page,
+and there click the :guilabel:`Create pull request` button below the description.
+
+.. figure:: /_static/images/guides/gh-pr-build.png
+   :width: 80%
+   :align: center
+   :alt: GitHub Action building the pull request from GitHub
+
+   GitHub Action building the pull request from GitHub
+
+After opening the pull request, one or more GitHub Action checks will appear
+(depending on the number of status checks that you selected in the page of
+branch protection rules).
+A yellow icon indicates that the workflow is running,
+while green or red icons indicate successful completion or failure, respectively.
+If you click on the :guilabel:`Details` link -- while it is running or after completion --
+you will access the build logs.
+When the status checks pass and you are satisfied, you can merge the pull request!
