@@ -286,7 +286,7 @@ Setting up the Conda environment
 
 At this point, all the input files are in place, and the pipeline is configured and ready to run.
 However, your session environment likely does not include all the software dependencies that are
-required to execute each of the pipeline steps.
+required to execute each step of the pipeline.
 
 Each production pipeline includes YAML files that describe Conda environments needed to run the
 pipeline.
