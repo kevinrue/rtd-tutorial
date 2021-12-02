@@ -324,7 +324,7 @@ that will be executed when the pipeline is run, without executing them yet.
    python pipeline.py show full
 
 The command will print the name of the pipeline tasks that will be executed
-when you decided to run the pipeline.
+when you decide to run the pipeline.
 
 You can display more detailed information by increasing the verbosity of the command:
 
