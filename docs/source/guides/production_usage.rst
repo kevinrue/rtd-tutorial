@@ -156,3 +156,15 @@ First of all, click on the :guilabel:`Actions` menu.
    fail on the test input files during the GitHub Action workflow; this is
    entirely expected as the GitHub Action worklow is only designed to validate
    the pipeline on the test input files.
+
+Cloning the repository
+~~~~~~~~~~~~~~~~~~~~~~
+
+You are now ready to clone your copy of the repository on the computer where
+you intend to run the pipeline.
+For this, you will need `Git <https://git-scm.com/>`_
+and the URL of your own copy of the repository:
+
+.. prompt:: bash $
+
+    git clone git@github.com:kevinrue/pipeline_rnaseq_tutorial.git

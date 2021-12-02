@@ -222,7 +222,7 @@ Where to go from here
 ~~~~~~~~~~~~~~~~~~~~~
 
 At this point, you have a working copy of a minimal pipeline that uses its own files
- as input data to compute a word count and load the results in an SQLite database.
+as input data to compute a word count and load the results in an SQLite database.
 
 You will want to edit the files in the `template structure`_ to replace their contents with
 your own pipeline steps, set the default configuration of your pipeline,

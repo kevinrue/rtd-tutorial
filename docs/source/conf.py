@@ -2,8 +2,8 @@
 
 # -- Project information
 
-project = "Sims pipelines"
-copyright = "2021, Sims lab"
+project = "Sims-lab pipelines"
+copyright = "2021, Sims-lab"
 author = "Kevin Rue-Albrecht"
 
 release = "0.1"
