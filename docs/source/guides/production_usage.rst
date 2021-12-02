@@ -243,3 +243,139 @@ Thus, we need to use the ``gzip`` program to decompress the file:
 .. prompt:: bash $
 
    gzip -d data/Homo_sapiens.GRCh38.dna.chromosome.22.fa.gz
+
+.. note::
+
+   In practice, the ``data/`` sub-directory will only contain input files associated with
+   experimental samples processed and tracked through the pipeline.
+   Other "accessory" files needed by specific steps of pipelines are often
+   stored in separate directories, for discoverability and re-use across projects.
+   For instance, many high-performance computing (HPC) clusters arrange shared folders
+   providing mirrored files for gene annotations and reference genome sequences.
+   It is also possible to create a sub-directory net to the ``data/`` sub-directory
+   (e.g. ``resources/``), to store those files within the repository of the project itself.
+
+Configuring the pipeline
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Now that the input files (or their symbolic links) are in place, you have all the information
+that you need to configure the pipeline before running it.
+
+The configuration of a pipeline is stored in the file ``config.yml``.
+
+Initially, that file contains the configuration needed to run the pipeline in the GitHub Action
+workflow that performs continuous integration checks during pipeline development and maintenance.
+In most cases, you will need to edit that configuration and set values that match your own data set.
+In this guide, we use the same test input files as the GitHub Action workflow,
+and we also set up those files in exactly the same layout, so there is nothing to change
+in the configuration file!
+
+Setting up the Conda environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+At this point, all the input files are in place, and the pipeline is configured and ready to run.
+However, your session environment likely does not include all the software dependencies that are
+required to execute each of the pipeline steps.
+
+Each production pipeline includes YAML files that describe Conda environments needed to run the
+pipeline.
+Specifically, the file ``envs/pipeline.yml`` contains the minimum set of dependencies to run the
+pipeline (other environments include dependencies required for continuous integration and testing).
+
+You can create the Conda environment necessary to run the pipeline as follows:
+
+.. prompt:: bash $
+
+   mamba env update --name pipeline_rnaseq_hisat2 --file envs/pipeline.yml
+
+.. note::
+
+   We recommend ``mamba`` as a faster alternative to ``conda`` for creating
+   the Conda enviromment.
+   Refer to :doc:`/guides/template` for installing ``mamba``.
+
+Once the installation is complete, you will need to load the Conda environment
+before you can run the pipeline:
+
+.. prompt:: bash $
+
+   conda activate pipeline_rnaseq_hisat2
+
+Showing the pipeline plan
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `cgat-core <https://cgat-core.readthedocs.io/en/latest/>`_
+pipeline engine include functionality for previewing the set of commands
+that will be executed when the pipeline is run, without executing them yet.
+
+.. prompt:: bash $
+
+   python pipeline.py show full
+
+The command will print the name of the pipeline tasks that will be executed
+when you decided to run the pipeline.
+
+You can display more detailed information by increasing the verbosity of the command:
+
+.. prompt:: bash $
+
+   python pipeline.py show full -v 5
+
+In this case, the name of input and output files for each pipeline task is displayed.
+This is particularly helpful for pipeline tasks that process multiple files in parallel,
+indicating which sets of files will be processed together, and what their respective
+output files will be named.
+
+Running the pipeline
+~~~~~~~~~~~~~~~~~~~~
+
+Having examined the pipeline plan, if you are satisfied with it,
+you are then ready to run the pipeline:
+
+.. prompt:: bash $
+
+   python pipeline.py make full
+
+.. note::
+
+   Similarly to the ``show`` command, you can increase the verbosity
+   of the logs.
+   We recommend ``python pipeline.py make full -v 5`` to collect
+   the maximum amount of information, in particular the reporting
+   of every job for every pipeline task.
+
+   If the Distributed Resource Management Application API (DRMAA)
+   is not supported on the computer where you wish to run the pipeline,
+   you can run the pipeline using the ``--local`` option,
+   i.e., ``python pipeline.py make full --local``.
+
+Checking the pipeline outputs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The pipeline `pipeline_rnaseq_hisat2 <https://github.com/sims-lab/pipeline_rnaseq_hisat2>`_
+stores all its output files in the sub-directory ``results/`` (automatically created
+if it does not exist yet).
+You can list, navigate, and open sub-directories and files to inspect their contents:
+
+.. prompt:: bash $
+
+   ls results/
+   less results/featureCounts/counts.log
+
+Where to go from here
+~~~~~~~~~~~~~~~~~~~~~
+
+This is the end of the guide.
+You started by making a copy of the production pipeline as a new repository on GitHub,
+and cloning it to the computer where you decided to run the pipeline.
+Then, you set up input files for the pipelines, configured it, and set up a Conda environment
+in which you executed the pipeline, watching output files being created and logs being generated
+in the console.
+
+More resources will be added shortly to this documentation to continue learning
+about the Sims-lab pipelines:
+
+* Best practices and recommendations
+* Code styling
+* Documentation
+* ... and more!

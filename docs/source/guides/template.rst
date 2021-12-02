@@ -230,8 +230,9 @@ and declare the dependencies that must be present in the Conda environments used
 run and test the pipeline.
 
 More resources will be added shortly to this documentation to continue learning
-about the Sims pipelines:
+about the Sims-lab pipelines:
 
 * Best practices and recommendations
 * Code styling
+* Documentation
 * ... and more!
