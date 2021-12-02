@@ -153,4 +153,6 @@ First of all, click on the :guilabel:`Actions` menu.
 
    In the next steps, you will edit the configuration of the pipeline to run
    on your own files. The modified configuration will cause the pipeline to
-   fail on the test input files during the GitHub Action workflow.
+   fail on the test input files during the GitHub Action workflow; this is
+   entirely expected as the GitHub Action worklow is only designed to validate
+   the pipeline on the test input files.
