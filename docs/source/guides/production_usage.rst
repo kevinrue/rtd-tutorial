@@ -224,7 +224,7 @@ and are processed extremely quickly in the various pipeline steps.
      than the original file names (e.g., FASTQ files produced by sequencing facilities).
 
 In this case, the pipeline requires gene annotations and sequencing reads in gzip-compressed file formats.
-However, we provide those file uncompressed for online readability, thanks to their small file size.
+However, we provide those file uncompressed for readability on the GitHub repository, thanks to their small file size.
 Thus, we need to use the ``gzip`` program to compress the relevant files:
 
 .. prompt:: bash $
