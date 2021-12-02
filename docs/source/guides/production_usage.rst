@@ -222,6 +222,7 @@ In this guide, we download the set of test input files used the GitHub Action wo
      than the original file names (e.g., FASTQ files produced by sequencing facilities).
 
 In this case, the pipeline requires gene annotations and sequencing reads in gzip-compressed formats.
+However, we provide those file uncompressed for online readability, thanks to their small file size.
 We need to use the ``gzip`` program to compress the relevant files:
 
 .. prompt:: bash $
