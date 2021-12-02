@@ -248,7 +248,7 @@ Thus, we need to use the ``gzip`` program to decompress the file:
 
 .. note::
 
-   In practice, the ``data/`` sub-directory will only contain input files associated with
+   In practice, the ``data/`` sub-directory often only contain input files associated with
    experimental samples processed and tracked through the pipeline.
    Other "accessory" files needed by specific steps of pipelines are often
    stored in separate directories, for discoverability and re-use across projects.
