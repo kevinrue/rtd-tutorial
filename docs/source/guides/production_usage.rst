@@ -303,7 +303,7 @@ You can create the Conda environment necessary to run the pipeline as follows:
 
    We recommend ``mamba`` as a faster alternative to ``conda`` for creating
    the Conda enviromment.
-   Refer to :doc:`/guides/template` for installing ``mamba``.
+   Refer to :ref:`usage:installation` for installing ``mamba``.
 
 Once the installation is complete, you will need to load the Conda environment
 before you can run the pipeline:
