@@ -30,7 +30,7 @@ Click it to open a new page that will ask you for some details:
 After that, click on the green :guilabel:`Create repository from template` button,
 which will generate a new repository on your personal account
 (or the one of your choosing).
-This is the repository you will import on Read the Docs,
+This is the repository you will use to develop and version control your new pipeline,
 and it contains the following files and sub-directories:
 
 .. _template structure:
