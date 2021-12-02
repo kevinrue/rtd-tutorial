@@ -184,7 +184,7 @@ those include:
 
 * a reference genome sequence (FASTA)
 * gene annotations (GTF)
-* a set of HISAT2 index files
+* a set of HISAT2 index files (*.ht2)
 * paired-end sequencing reads (FASTQ)
 
 In this guide, we download the set of test input files used the GitHub Action workflow.
