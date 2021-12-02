@@ -270,6 +270,14 @@ In this guide, we use the same test input files as the GitHub Action workflow,
 and we also set up those files in exactly the same layout, so there is nothing to change
 in the configuration file!
 
+.. note::
+
+   In practice, you will edit the configuration file to fit your own project.
+   We recommend committing those changes to Git and pushing them to GitHub
+   each time before you run the pipeline, so that you track your efforts
+   and give yourself the opportunity to revert to an earlier configuration
+   if you so wish.
+
 Setting up the Conda environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
