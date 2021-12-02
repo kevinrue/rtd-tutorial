@@ -291,7 +291,7 @@ required to execute each step of the pipeline.
 Each production pipeline includes YAML files that describe Conda environments needed to run the
 pipeline.
 Specifically, the file ``envs/pipeline.yml`` contains the minimum set of dependencies to run the
-pipeline (other environments include dependencies required for continuous integration and testing).
+pipeline (other environments include additional dependencies required for continuous integration and testing).
 
 You can create the Conda environment necessary to run the pipeline as follows:
 
