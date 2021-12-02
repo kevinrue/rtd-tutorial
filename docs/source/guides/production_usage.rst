@@ -167,4 +167,4 @@ and the URL of your own copy of the repository:
 
 .. prompt:: bash $
 
-    git clone git@github.com:kevinrue/pipeline_rnaseq_tutorial.git
+   git clone git@github.com:kevinrue/pipeline_rnaseq_tutorial.git
