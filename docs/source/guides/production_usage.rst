@@ -133,6 +133,6 @@ of commands run during the GitHub Action workflow, and their outputs.
    and the environment in which the workflow is executed.
 
    For production pipelines, if this first build reports a failure, we recommend opening
-   an issue on the repository used as template (in this case `pipeline_rnaseq_hisat2
+   an issue on the repository used as template (in this example, `pipeline_rnaseq_hisat2
    <https://github.com/sims-lab/pipeline_rnaseq_hisat2>`_),
    including a link to the build report of the GitHub Action workflow that failed.
