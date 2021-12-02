@@ -71,7 +71,7 @@ and it contains the following files and sub-directories:
 .. figure:: /_static/images/guides/github-template.png
    :width: 80%
    :align: center
-   :alt: GitHub template for the tutorial
+   :alt: Template pipeline on GitHub
 
    Template pipeline on GitHub
 

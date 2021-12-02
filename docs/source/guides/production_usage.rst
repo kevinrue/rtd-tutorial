@@ -28,10 +28,11 @@ of the pipeline for your project:
 
 .. note::
 
-   The template repository includes a GitHub Action workflow for continuous integration,
-   which counts towards your GitHub Action usage allowance for private repositories.
+   The template repository includes a GitHub Action workflow for continuous integration.
    That workflow is only relevant to testing the pipeline during development
-   and maintenance. You will not need it for using the pipeline, and a section below
+   and maintenance. However, its execution counts towards your usage allowance for GitHub Action
+   in private repositories.
+   You will not need it for using the pipeline, and a section below
    demonstrates how to disable GitHub Action on your repository.
 
 After that, click on the green :guilabel:`Create repository from template` button,
@@ -73,3 +74,10 @@ and it contains the following files and sub-directories:
 ``pipeline.py``
   Python script that describes the pipeline steps and overall workflow,
   you will leave it untouched.
+
+.. figure:: /_static/images/guides/github-production.png
+   :width: 80%
+   :align: center
+   :alt: Production pipeline on GitHub
+
+   Production pipeline on GitHub
