@@ -70,3 +70,48 @@ to the parent repository, and it contains the following files and sub-directorie
    :alt: Production pipeline forked on GitHub
 
    Production pipeline forked on GitHub
+
+First steps
+-----------
+
+Triggering the first build
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. figure:: /_static/images/guides/github-workflow-enable.png
+   :width: 80%
+   :align: center
+   :alt: View before enabling GitHub Action runs.
+
+   View before enabling GitHub Action runs
+
+GitHub will automatically detect GitHub Action workflows
+in your project, but on forked repositories it requires you to explicitly
+allow them to run, for security reasons.
+
+Click on the green button :guilabel:`I understand my workflows, go ahead and enable them`.
+This will take you to the "Actions" page of the repository,
+where you will find the list of workflows (one workflow) and workflow runs (empty so far).
+
+* Click on the workflow :guilabel:`CI`, in the left pane.
+* On the right, click on the grey button :guilabel:`Run workflow`,
+  leave ``main`` as the selected branch,
+  and click on the green button :guilabel:`Run workflow`.
+
+.. figure:: /_static/images/guides/github-action-manual-run.png
+   :width: 80%
+   :align: center
+   :alt: View before enabling GitHub Action runs.
+
+   View before enabling GitHub Action runs
+
+After a few seconds, an entry will appear in the main panel,
+representing the first run of the workflow.
+
+To see the build logs, click on the title of the workflow run.
+
+.. figure:: /_static/images/guides/fork-first-successful-build.png
+   :width: 80%
+   :align: center
+   :alt: First successful build
+
+   First successful build
