@@ -188,6 +188,8 @@ those include:
 * paired-end sequencing reads (FASTQ)
 
 In this guide, we download the set of test input files used the GitHub Action workflow.
+Those are very small files that do not take much disk space at all,
+and are processed extremely quickly in the various pipeline steps.
 
 .. prompt:: bash $
 
