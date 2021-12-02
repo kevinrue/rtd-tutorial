@@ -277,7 +277,7 @@ in the configuration file!
 
    In practice, you will edit the configuration file to fit your own project.
    We recommend committing those changes to Git and pushing them to GitHub
-   each time before you run the pipeline, so that you track your efforts
+   each time you run the pipeline, so that you track your efforts
    and give yourself the opportunity to revert to an earlier configuration
    if you so wish.
 
