@@ -136,3 +136,21 @@ of commands run during the GitHub Action workflow, and their outputs.
    an issue on the repository used as template (in this example, `pipeline_rnaseq_hisat2
    <https://github.com/sims-lab/pipeline_rnaseq_hisat2>`_),
    including a link to the build report of the GitHub Action workflow that failed.
+
+Basic configuration changes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can now proceed to make some basic configuration adjustments.
+Navigate back to the project repository and click on the :guilabel:`Settings`
+button, which will open the Settings page.
+
+First of all, click on the :guilabel:`Actions` menu.
+
+* Set "Action permissions" to ``Disable Actions``.
+* Click the :guilabel:`Save` button.
+
+.. note::
+
+   In the next steps, you will edit the configuration of the pipeline to run
+   on your own files. The modified configuration will cause the pipeline to
+   fail on the test input files during the GitHub Action workflow.
