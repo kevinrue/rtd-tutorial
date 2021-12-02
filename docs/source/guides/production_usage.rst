@@ -386,9 +386,9 @@ Where to go from here
 This is the end of the guide.
 You started by making a copy of the production pipeline as a new repository on GitHub,
 and cloning it to the computer where you decided to run the pipeline.
-Then, you set up input files for the pipelines, configured it, and set up a Conda environment
-in which you executed the pipeline, watching output files being created and logs being generated
-in the console.
+Then, you set up input files for the pipelines, configured the pipeline,
+and set up a Conda environment in which you executed the pipeline,
+watching output files being created and logs being generated in the console.
 
 More resources will be added shortly to this documentation to continue learning
 about the Sims-lab pipelines:
