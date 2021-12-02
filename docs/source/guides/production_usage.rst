@@ -221,9 +221,9 @@ In this guide, we download the set of test input files used the GitHub Action wo
    * Create an opportunity to give symbolic links human-readable names often friendlier
      than the original file names (e.g., FASTQ files produced by sequencing facilities).
 
-In this case, the pipeline requires gene annotations and sequencing reads in gzip-compressed formats.
+In this case, the pipeline requires gene annotations and sequencing reads in gzip-compressed file formats.
 However, we provide those file uncompressed for online readability, thanks to their small file size.
-We need to use the ``gzip`` program to compress the relevant files:
+Thus, we need to use the ``gzip`` program to compress the relevant files:
 
 .. prompt:: bash $
 
@@ -233,3 +233,13 @@ We need to use the ``gzip`` program to compress the relevant files:
       data/sample_02_1.fastq \
       data/sample_02_2.fastq \
       data/chr22.genes2.gtf
+
+Conversely, the pipeline requires the reference genome sequence in plain text -- uncompressed -- FASTA format.
+However, we download the test input file directly from the Ensembl FTP portal,
+as its considerable file size does not motivate the hosting of an uncompressed version in
+a code repository, and there is no good reason to subset that file to a shorter reference sequence.
+Thus, we need to use the ``gzip`` program to decompress the file:
+
+.. prompt:: bash $
+
+   gzip -d data/Homo_sapiens.GRCh38.dna.chromosome.22.fa.gz
