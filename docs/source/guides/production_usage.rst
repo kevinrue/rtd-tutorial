@@ -236,7 +236,7 @@ Thus, we need to use the ``gzip`` program to compress the relevant files:
       data/sample_02_2.fastq \
       data/chr22.genes2.gtf
 
-Conversely, the pipeline requires the reference genome sequence in plain text -- uncompressed -- FASTA format.
+Conversely, the pipeline requires the reference genome sequence in plain text -- i.e., uncompressed -- FASTA format.
 However, we download the test input file directly from the Ensembl FTP portal,
 as its considerable file size does not motivate the hosting of an uncompressed version in
 a code repository, and there is no good reason to subset that file to a shorter reference sequence.
