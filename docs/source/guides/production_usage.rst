@@ -175,3 +175,39 @@ Change directory into the cloned repository:
 
    cd pipeline_rnaseq_tutorial
 
+Add input files in the ``data`` sub-directory of the cloned repository.
+In this guide, we download the set of test input files used the GitHub Action workflow.
+
+.. prompt:: bash $
+
+   wget \
+      http://ftp.ensembl.org/pub/release-104/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.22.fa.gz \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/chr22.genes2.gtf \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/hisat2_chr22.1.ht2 \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/hisat2_chr22.2.ht2 \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/hisat2_chr22.3.ht2 \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/hisat2_chr22.4.ht2 \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/hisat2_chr22.5.ht2 \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/hisat2_chr22.6.ht2 \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/hisat2_chr22.7.ht2 \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/hisat2_chr22.8.ht2 \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_01_1.fastq \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_01_2.fastq \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_02_1.fastq \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_02_2.fastq \
+      -P data
+
+.. note::
+
+   In practice, we discourage users from storing the actual files inside the clone of the repository.
+   Instead, we recommend users to store the original files in a separate location on the computer,
+   and create symbolic links to those files in the ``data`` sub-directory of every project that
+   uses them.
+   There are several reasons for this:
+
+   * Mitigate the risk of accidentally committing large files to Git.
+   * Avoid redundant disk usage for files that are used in multiple projects.
+   * Create an opportunity to give symbolic links human-readable names often friendlier
+     than the original file names (e.g., FASTQ files produced by sequencing facilities).
+
+
