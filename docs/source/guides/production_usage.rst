@@ -373,6 +373,13 @@ You can list, navigate, and open sub-directories and files to inspect their cont
    ls results/
    less results/featureCounts/counts.log
 
+.. note::
+
+   We recommend all production pipelines to write their output files 
+   in a sub-directory named ``results/``.
+   This makes it extremely easy to rapidly remove the outputs of a pipeline run
+   -- for instance, after a failed run -- before running it again from the top.
+
 Where to go from here
 ~~~~~~~~~~~~~~~~~~~~~
 
