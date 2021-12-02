@@ -71,7 +71,7 @@ and it contains the following files and sub-directories:
 .. figure:: /_static/images/guides/github-template.png
    :width: 80%
    :align: center
-   :alt: GitHub template for the tutorial
+   :alt: Template pipeline on GitHub
 
    Template pipeline on GitHub
 
@@ -222,7 +222,7 @@ Where to go from here
 ~~~~~~~~~~~~~~~~~~~~~
 
 At this point, you have a working copy of a minimal pipeline that uses its own files
- as input data to compute a word count and load the results in an SQLite database.
+as input data to compute a word count and load the results in an SQLite database.
 
 You will want to edit the files in the `template structure`_ to replace their contents with
 your own pipeline steps, set the default configuration of your pipeline,
@@ -230,8 +230,9 @@ and declare the dependencies that must be present in the Conda environments used
 run and test the pipeline.
 
 More resources will be added shortly to this documentation to continue learning
-about the Sims pipelines:
+about the Sims-lab pipelines:
 
 * Best practices and recommendations
 * Code styling
+* Documentation
 * ... and more!
