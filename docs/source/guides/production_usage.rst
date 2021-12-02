@@ -333,7 +333,7 @@ You can display more detailed information by increasing the verbosity of the com
    python pipeline.py show full -v 5
 
 In this case, the name of input and output files for each pipeline task is displayed.
-This is particularly helpful for pipeline tasks that process multiple files in parallel,
+This is particularly helpful for pipeline tasks that process multiple sets of files in parallel,
 indicating which sets of files will be processed together, and what their respective
 output files will be named.
 
