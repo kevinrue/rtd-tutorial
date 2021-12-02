@@ -168,3 +168,10 @@ and the URL of your own copy of the repository:
 .. prompt:: bash $
 
    git clone git@github.com:kevinrue/pipeline_rnaseq_tutorial.git
+
+Change directory into the cloned repository:
+
+.. prompt:: bash $
+
+   cd pipeline_rnaseq_tutorial
+
