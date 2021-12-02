@@ -279,7 +279,7 @@ in the configuration file!
    We recommend committing those changes to Git and pushing them to GitHub
    each time you run the pipeline, so that you track your efforts
    and give yourself the opportunity to revert to an earlier configuration
-   if you so wish.
+   if you ever wish to do so.
 
 Setting up the Conda environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
