@@ -238,8 +238,8 @@ Thus, we need to use the ``gzip`` program to compress the relevant files:
 
 Conversely, the pipeline requires the reference genome sequence in plain text -- i.e., uncompressed -- FASTA format.
 However, we downloaded the test input file directly from the Ensembl FTP portal,
-as its considerable file size does not motivate the hosting of an uncompressed version in
-a code repository, and there is no good reason to subset that file to a shorter reference sequence.
+as its considerable file size does not motivate the hosting of an uncompressed version alongside
+the other test files, and there is no good reason to subset that file to a shorter reference sequence.
 Thus, we need to use the ``gzip`` program to decompress the file:
 
 .. prompt:: bash $
