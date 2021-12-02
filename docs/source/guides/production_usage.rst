@@ -175,7 +175,18 @@ Change directory into the cloned repository:
 
    cd pipeline_rnaseq_tutorial
 
-Add input files in the ``data`` sub-directory of the cloned repository.
+Setting up input files
+~~~~~~~~~~~~~~~~~~~~~~
+
+Add input files in the ``data/`` sub-directory of the cloned repository.
+For `pipeline_rnaseq_hisat2 <https://github.com/sims-lab/pipeline_rnaseq_hisat2>`_,
+those include:
+
+* a reference genome sequence (FASTA)
+* gene annotations (GTF)
+* a set of HISAT2 index files
+* paired-end sequencing reads (FASTQ)
+
 In this guide, we download the set of test input files used the GitHub Action workflow.
 
 .. prompt:: bash $
@@ -201,7 +212,7 @@ In this guide, we download the set of test input files used the GitHub Action wo
 
    In practice, we discourage users from storing the actual files inside the clone of the repository.
    Instead, we recommend users to store the original files in a separate location on the computer,
-   and create symbolic links to those files in the ``data`` sub-directory of every project that
+   and create symbolic links to those files in the ``data/`` sub-directory of every project that
    uses them.
    There are several reasons for this:
 
@@ -210,4 +221,14 @@ In this guide, we download the set of test input files used the GitHub Action wo
    * Create an opportunity to give symbolic links human-readable names often friendlier
      than the original file names (e.g., FASTQ files produced by sequencing facilities).
 
+In this case, the pipeline requires gene annotations and sequencing reads in gzip-compressed formats.
+We need to use the ``gzip`` program to compress the relevant files:
 
+.. prompt:: bash $
+
+   gzip \
+      data/sample_01_1.fastq \
+      data/sample_01_2.fastq \
+      data/sample_02_1.fastq \
+      data/sample_02_2.fastq \
+      data/chr22.genes2.gtf
