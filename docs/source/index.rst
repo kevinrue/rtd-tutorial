@@ -31,7 +31,7 @@ related to developing the templates of pipelines themselves.
 
 * **Developing pipelines**:
   :doc:`/guides/template` |
-  :doc:`/guides/production_fork`
+  :doc:`/guides/production_fork` |
   :doc:`More guides on the topic </guides/production>`
 
 .. toctree::
