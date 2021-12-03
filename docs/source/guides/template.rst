@@ -205,9 +205,9 @@ and there click the :guilabel:`Create pull request` button below the description
 .. figure:: /_static/images/guides/gh-pr-build.png
    :width: 80%
    :align: center
-   :alt: GitHub Action building the pull request from GitHub
+   :alt: GitHub Action building the pull request.
 
-   GitHub Action building the pull request from GitHub
+   GitHub Action building the pull request.
 
 After opening the pull request, one or more GitHub Action checks will appear
 (depending on the number of status checks that you selected in the page of

@@ -155,3 +155,120 @@ of commands run during the GitHub Action workflow, and their outputs.
    as this is an absolute requirement to merge a pull request to the parent repository.
    In doubt, contact the maintainer of the parent repository for help and advice
    (e.g., open a Github issue on the parent repository).
+
+Creating a Git branch
+~~~~~~~~~~~~~~~~~~~~~
+
+Once you have identified a feature that you wish to add to the pipeline template,
+or a bug that you wish to fix, create a branch in your fork of the repository.
+
+.. note::
+
+   Working on branches allows you to experiment with new code and functionality
+   without polluting the main branch of the repository.
+   If your ideas implement on the branch do not work out, you can simply remove the branch;
+   this will discard your work on that one branch, keeping everything else nice and tidy.
+   If you idea did produce code that is worth adding to the template of that pipeline,
+   you can open a GitHub pull request on the parent repository;
+   this will merge the updates on your branch to the main branch of the parent repository,
+   which you can subsequently pull into the main branch of your fork...
+   before creating another branch to work on another new feature!
+
+To demonstrate this, navigate to your GitHub fork, locate the file ``README.md``,
+and click the pencil icon on the top-right with the tooltip "Edit this file"
+to open a web editor.
+
+__  https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/editing-files-in-your-repository
+
+.. figure:: /_static/images/guides/gh-fork.png
+   :width: 80%
+   :align: center
+   :alt: File view on GitHub before launching the editor
+
+   File view on GitHub before launching the editor
+
+In the editor, add the line:
+
+.. code-block:: md
+   :caption: docs/source/README.md
+
+    This is a fork of a production pipeline.
+
+Write an appropriate commit message,
+and choose the "Create a **new branch** for this commit and start a pull request" option,
+typing a name for the new branch (e.g. ``tutorial``).
+When you are done, click the green :guilabel:`Propose changes` button,
+which will take you to the new pull request page.
+
+However, once there, do not submit the form;
+instead, navigate back to the main page of your fork.
+
+* In the top-left corner, select the branch that contains your work.
+* Next, click the dropdown menu :guilabel:`Contribute`.
+* In the modal that appears, click the green button
+  :guilabel:`Open pull request`.
+
+.. figure:: /_static/images/guides/fork-pr.png
+   :width: 80%
+   :align: center
+   :alt: View before enabling GitHub Action runs.
+
+   View before enabling GitHub Action runs
+
+This will take you to pull request between the branch in your repository
+and the main branch of the parent repository.
+
+.. figure:: /_static/images/guides/fork-pr-form.png
+   :width: 80%
+   :align: center
+   :alt: Form submitting pull request between repositories.
+
+   Form submitting pull request between repositories.
+
+Scroll down to inspect the proposed changes,
+type a suitable title to describe your pull request
+(optionally leaving a comment in the larger text box for a more detailed description),
+and click the green button :guilabel:`Create pull request`.
+
+.. figure:: /_static/images/guides/fork-pr-build.png
+   :width: 80%
+   :align: center
+   :alt: GitHub Action building the pull request.
+
+   GitHub Action building the pull request.
+
+After opening the pull request, one or more GitHub Action checks will appear
+(depending on the number of status checks that the parent repository has in place).
+A yellow icon indicates that the workflow is running,
+while green or red icons indicate successful completion or failure, respectively.
+If you click on the :guilabel:`Details` link -- while it is running or after completion --
+you will access the build logs.
+
+When the status checks pass and the maintainer of the parent repository is satisfied,
+they will be able to merge the pull request.
+
+.. note::
+
+   We recommend the "Squash and merge" strategy for merging pull requests,
+   as this maintains prevents merge commits from being pushed to the main branch
+   of the repository, keeping a linear history in the Git log that is much easier
+   to read in the future.
+   
+   Moreover, the "squash" part of the process collapses all the commits on the
+   branch proposing the changes into a single commit on the parent repository.
+   Again, this will make it a lot easier to read, summarised, and interpret changes
+   brought in by individual pull requests without navigating a large number of commits.
+   It also makes it easier to revert the changes brought in by a pull request,
+   without undoing every single commit on that branch.
+
+.. figure:: /_static/images/guides/fork-delete-branch.png
+   :width: 80%
+   :align: center
+   :alt: Deleting a branch after a pull request.
+
+   Deleting a branch after a pull request.
+
+When the pull request is merged, 
+navigate to the page of the pull request on the parent repository
+and click on the :guilabel:`Delete branch` button
+to delete the branch from your repository.
