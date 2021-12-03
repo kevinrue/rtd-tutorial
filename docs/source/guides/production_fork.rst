@@ -165,10 +165,14 @@ or a bug that you wish to fix, create a branch in your fork of the repository.
 .. note::
 
    Working on branches allows you to experiment with new code and functionality
-   without polluting the main branch of the repository.
-   If your ideas implement on the branch do not work out, you can simply remove the branch;
-   this will discard your work on that one branch, keeping everything else nice and tidy.
-   If you idea did produce code that is worth adding to the template of that pipeline,
+   without polluting the main branch of the repository with unnecessary
+   commits representing all your invididual attempts to implement your idea.
+
+   If your idea does not work out, you can simply remove the branch from your fork;
+   this will discard your work on that one branch, keeping everything else
+   nice and tidy.
+
+   If you idea did produce code that is worth integrating into the upstream repository,
    you can open a GitHub pull request on the upstream repository;
    this will merge the updates on your branch to the main branch of the upstream repository,
    which you can subsequently pull into the main branch of your fork...
