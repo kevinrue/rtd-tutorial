@@ -1,5 +1,5 @@
-Welcome to the Sims pipelines documentation!
-============================================
+Welcome to the Sims-lab pipelines documentation!
+================================================
 
 The Sims-lab pipelines use `ruffus <http://www.ruffus.org.uk/>`_
 and `cgat-core <https://cgat-core.readthedocs.io/en/latest/>`_
