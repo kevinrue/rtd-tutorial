@@ -280,10 +280,10 @@ in the configuration file!
 .. note::
 
    In practice, you will edit the configuration file to fit your own project.
-   We recommend committing those changes to Git and pushing them to GitHub
-   each time you run the pipeline, so that you track your efforts
-   and give yourself the opportunity to revert to an earlier configuration
-   if you ever wish to do so.
+   We recommend committing those changes to Git and pushing them to your copy
+   of the repository on GitHub each time you run the pipeline,
+   so that you track your efforts and give yourself the opportunity
+   to revert to an earlier configuration, if you ever wish to do so.
 
 Setting up the Conda environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
