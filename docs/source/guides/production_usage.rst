@@ -2,7 +2,7 @@ Using production pipelines
 ==========================
 
 This page describes how to use a production pipelines to process data.
-To propose changes to the reference template of a production pipeline,
+To propose changes to the template of a production pipeline,
 refer to :doc:`/guides/production_fork`.
 
 Production pipelines provide tried and tested bioinformatics workflows
