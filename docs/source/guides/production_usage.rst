@@ -2,6 +2,8 @@ Using production pipelines
 ==========================
 
 This page describes how to use a production pipelines to process data.
+To propose changes to the reference template of a production pipeline,
+refer to :doc:`/guides/production_fork`.
 
 Production pipelines provide tried and tested bioinformatics workflows
 that are ready to be used for processing data sets.
@@ -38,7 +40,7 @@ of the pipeline for your project:
 After that, click on the green :guilabel:`Create repository from template` button,
 which will generate a new repository on your personal account
 (or the one of your choosing).
-This is the repository you will import on Read the Docs,
+This is the repository you will use to version control your new project,
 and it contains the following files and sub-directories:
 
 ``.github/workflows/build.yml``

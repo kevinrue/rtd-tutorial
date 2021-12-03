@@ -30,7 +30,7 @@ Click it to open a new page that will ask you for some details:
 After that, click on the green :guilabel:`Create repository from template` button,
 which will generate a new repository on your personal account
 (or the one of your choosing).
-This is the repository you will import on Read the Docs,
+This is the repository you will use to develop and version control your new pipeline,
 and it contains the following files and sub-directories:
 
 .. _template structure:
@@ -205,9 +205,9 @@ and there click the :guilabel:`Create pull request` button below the description
 .. figure:: /_static/images/guides/gh-pr-build.png
    :width: 80%
    :align: center
-   :alt: GitHub Action building the pull request from GitHub
+   :alt: GitHub Action building the pull request.
 
-   GitHub Action building the pull request from GitHub
+   GitHub Action building the pull request.
 
 After opening the pull request, one or more GitHub Action checks will appear
 (depending on the number of status checks that you selected in the page of
