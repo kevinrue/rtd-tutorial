@@ -2,7 +2,7 @@ Using production pipelines
 ==========================
 
 This page describes how to use a production pipelines to process data.
-To propose changes to the reference template of a production pipeline,
+To propose changes to the template of a production pipeline,
 refer to :doc:`/guides/production_fork`.
 
 Production pipelines provide tried and tested bioinformatics workflows
@@ -224,6 +224,8 @@ and are processed extremely quickly in the various pipeline steps.
    * Avoid redundant disk usage for files that are used in multiple projects.
    * Create an opportunity to give symbolic links human-readable names often friendlier
      than the original file names (e.g., FASTQ files produced by sequencing facilities).
+   * If accidentally commited to Git, symbolic links are extremely small files,
+     that will not any significant issue in the Git repository.
 
 In this case, the pipeline requires gene annotations and sequencing reads in gzip-compressed file formats.
 However, we provide those file uncompressed for readability on the GitHub repository, thanks to their small file size.
@@ -239,7 +241,7 @@ Thus, we need to use the ``gzip`` program to compress the relevant files:
       data/chr22.genes2.gtf
 
 Conversely, the pipeline requires the reference genome sequence in plain text -- i.e., uncompressed -- FASTA format.
-However, we downloaded the test input file directly from the Ensembl FTP portal,
+However, we downloaded the test input file in compressed format directly from the Ensembl FTP portal,
 as its considerable file size does not motivate the hosting of an uncompressed version alongside
 the other test files, and there is no good reason to subset that file to a shorter reference sequence.
 Thus, we need to use the ``gzip`` program to decompress the file:
@@ -278,10 +280,10 @@ in the configuration file!
 .. note::
 
    In practice, you will edit the configuration file to fit your own project.
-   We recommend committing those changes to Git and pushing them to GitHub
-   each time you run the pipeline, so that you track your efforts
-   and give yourself the opportunity to revert to an earlier configuration
-   if you ever wish to do so.
+   We recommend committing those changes to Git and pushing them to your copy
+   of the repository on GitHub each time you run the pipeline,
+   so that you track your efforts and give yourself the opportunity
+   to revert to an earlier configuration, if you ever wish to do so.
 
 Setting up the Conda environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

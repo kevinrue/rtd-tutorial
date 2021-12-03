@@ -1,7 +1,7 @@
-Welcome to the Sims pipelines documentation!
-============================================
+Welcome to the Sims-lab pipelines documentation!
+================================================
 
-The Sims pipelines use `ruffus <http://www.ruffus.org.uk/>`_
+The Sims-lab pipelines use `ruffus <http://www.ruffus.org.uk/>`_
 and `cgat-core <https://cgat-core.readthedocs.io/en/latest/>`_
 to write and execute bioinformatics workflows locally or on
 high-performance computing (HPC) clusters.
@@ -26,9 +26,13 @@ How-to Guides
 These guides will help walk you through specific use cases
 related to developing the templates of pipelines themselves.
 
-* :doc:`/guides/template`
-  
-* :doc:`/guides/production`
+* **Using pipelines**:
+  :doc:`/guides/production_usage`
+
+* **Developing pipelines**:
+  :doc:`/guides/template` |
+  :doc:`/guides/production_fork` |
+  :doc:`More guides on the topic </guides/production>`
 
 .. toctree::
  :maxdepth: 2

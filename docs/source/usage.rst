@@ -6,4 +6,5 @@ Usage
 Installation
 ------------
 
-To use the Sims pipelines, first install `Miniconda <https://conda.io/miniconda.html>`_.
+To use the Sims-lab pipelines, first install `Miniconda
+<https://conda.io/miniconda.html>`_.
