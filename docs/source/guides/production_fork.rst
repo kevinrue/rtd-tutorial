@@ -156,8 +156,8 @@ of commands run during the GitHub Action workflow, and their outputs.
    In doubt, contact the maintainer of the parent repository for help and advice
    (e.g., open a Github issue on the parent repository).
 
-Creating a Git branch
-~~~~~~~~~~~~~~~~~~~~~
+Proposing changes
+~~~~~~~~~~~~~~~~~
 
 Once you have identified a feature that you wish to add to the pipeline template,
 or a bug that you wish to fix, create a branch in your fork of the repository.
@@ -278,3 +278,49 @@ to delete the branch from your repository.
    Once a branch is merged, it does not have any more value to keep around,
    and only clutters your own repository, making it increasingly difficult
    to identify branches that you are actively working on.
+
+Updating your fork
+~~~~~~~~~~~~~~~~~~
+
+Having merged the pull request to the main branch of the parent repository,
+your own fork is now out of date as the changes do not automatically propagate
+to the main branch of your fork.
+This is also the case when pull requests made by other contributors are merged
+to the parent repository.
+It is always a good idea to check whether the parent repository has been updated
+since your last visit, every time that you work on your fork.
+
+To bring the latest updates from the parent repository into your fork:
+
+* Navigate to the main page of the parent repository
+* Click the dropdown menu :guilabel:`Fetch upstream`.
+* In the modal that appears, if your fork is out of date,
+  you will see a green button :guilabel:`Fetch and merge`.
+  Click on it.
+
+.. figure:: /_static/images/guides/fork-fetch-upstream.png
+   :width: 80%
+   :align: center
+   :alt: Fetching commit from an upstream repository to update a fork.
+
+   Fetching commit from an upstream repository to update a fork.
+
+Where to go from here
+~~~~~~~~~~~~~~~~~~~~~
+
+This is the end of the guide.
+You started by making a fork of the production pipeline as a new repository on GitHub,
+created a branch to work on a feature or a bug fix,
+and made a pull request that passed continuous integration before being merged
+by the maintainer of the parent repository.
+Then you deleted your branch and fetched the updated code
+from the parent repository into your fork.
+
+More resources will be added shortly to this documentation to continue learning
+about the Sims-lab pipelines:
+
+* Working on pipelines locally with Git
+* Best practices and recommendations
+* Code styling
+* Documentation
+* ... and more!
