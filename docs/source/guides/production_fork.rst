@@ -31,24 +31,34 @@ This is the repository you will use to work on the pipeline and prepare pull req
 to the parent repository, and it contains the following files and sub-directories:
 
 ``.github/workflows/build.yml``
-  Sub-directory that contains instructions for GitHub Action workflows,
-  you will leave it untouched.
+  Sub-directory that contains instructions for GitHub Action workflows.
+  In most cases, you will leave it untouched; however, you may need to
+  occasionally update it with fixes, or to add new custom steps
+  (e.g., download additional test input files to test new steps in the pipeline).
 
 ``data/``
-  Sub-directory where you will download the input FASTQ files for this guide.
-  In your own projects, we recommend create symbolic links in this folder,
-  while keeping your original data files outside of this repository
-  (mostly to avoid accidentally committing those files to Git).
+  Sub-directory where users will download the input FASTQ files for this guide.
+  In most cases, you will leave this untouched, as the pipeline is automatically
+  tested by GitHub Action workflows triggered by every new commit pushed to
+  a pull request on the GitHub repository.
+  You might occasionally decide to set up test input files in this sub-directory,
+  to test the pipeline on your local computer, in which case you will be careful
+  not to commit those data files to Git!
 
 ``envs/``
   Sub-directory that contains YAML files describing Conda environments
-  for running or testing the pipeline, you will leave it untouched.
-  You will only used those files as input to create the necessary
-  Conda environment on the system where you will run the pipeline.
+  for running or testing the pipeline. You may update those files when identifying
+  new dependencies required by your updates to the pipeline, or removing deprecated
+  dependencies required by software that is not used anymore following updates to
+  the pipeline.
 
 ``etc/``
   Sub-directory that contains additional files needed specifically 
-  for continuous integration, you will leave it untouched.
+  for continuous integration.
+  You will update the file ``etc/ci_checks.sh`` to add or remove the path to
+  expected output files following updates to the pipeline. This file is used
+  to verify that all the expected files are present at the end of the pipeline run
+  during the GitHub Action.
 
 ``README.md``
   Basic description of the repository.
@@ -57,12 +67,14 @@ to the parent repository, and it contains the following files and sub-directorie
 ``config.yml``
   YAML file that is used to configure parameters of the pipeline.
   The file is included with example values.
-  You will edit this file with values suited to your own situation,
-  before running the pipeline.
+  You will update this file with values that match your updates to the pipeline.
+  Updates range from editing existing values, to adding or removing fields
+  that control new or deprecated parameters of the pipeline controlled by users.
 
 ``pipeline.py``
-  Python script that describes the pipeline steps and overall workflow,
-  you will leave it untouched.
+  Python script that describes the pipeline steps and overall workflow.
+  You will edit this file with updates to the existing pipeline tasks, and
+  possibly extend the pipeline with new tasks or remove deprecated functionality.
 
 .. figure:: /_static/images/guides/github-fork.png
    :width: 80%
