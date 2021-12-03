@@ -94,7 +94,7 @@ Triggering the first build
    :align: center
    :alt: View before enabling GitHub Action runs.
 
-   View before enabling GitHub Action runs
+   View before enabling GitHub Action runs on a fork
 
 GitHub will automatically detect GitHub Action workflows
 in your project, but on forked repositories it requires you to explicitly
@@ -124,7 +124,7 @@ To see the build logs, click on the title of the workflow run.
 .. figure:: /_static/images/guides/fork-first-successful-build.png
    :width: 80%
    :align: center
-   :alt: First successful build
+   :alt: First successful build.
 
    First successful build
 
@@ -183,7 +183,7 @@ __  https://docs.github.com/en/github/managing-files-in-a-repository/managing-fi
 .. figure:: /_static/images/guides/gh-fork.png
    :width: 80%
    :align: center
-   :alt: File view on GitHub before launching the editor
+   :alt: File view on GitHub before launching the editor.
 
    File view on GitHub before launching the editor
 
@@ -211,9 +211,9 @@ instead, navigate back to the main page of your fork.
 .. figure:: /_static/images/guides/fork-pr.png
    :width: 80%
    :align: center
-   :alt: View before enabling GitHub Action runs.
+   :alt: Opening a pull request between a fork and an upstream repository.
 
-   View before enabling GitHub Action runs
+   Opening a pull request between a fork and an upstream repository
 
 This will take you to pull request between the branch in your repository
 and the main branch of the parent repository.
@@ -221,9 +221,9 @@ and the main branch of the parent repository.
 .. figure:: /_static/images/guides/fork-pr-form.png
    :width: 80%
    :align: center
-   :alt: Form submitting pull request between repositories.
+   :alt: View before submitting a pull request to the upstream repository.
 
-   Form submitting pull request between repositories.
+   View before submitting a pull request to the upstream repository
 
 Scroll down to inspect the proposed changes,
 type a suitable title to describe your pull request
@@ -235,7 +235,7 @@ and click the green button :guilabel:`Create pull request`.
    :align: center
    :alt: GitHub Action building the pull request.
 
-   GitHub Action building the pull request.
+   GitHub Action building the pull request
 
 After opening the pull request, one or more GitHub Action checks will appear
 (depending on the number of status checks that the parent repository has in place).
@@ -266,7 +266,7 @@ they will be able to merge the pull request.
    :align: center
    :alt: Deleting a branch after a pull request.
 
-   Deleting a branch after a pull request.
+   Deleting a branch after a pull request
 
 When the pull request is merged, 
 navigate to the page of the pull request on the parent repository
@@ -303,7 +303,7 @@ To bring the latest updates from the parent repository into your fork:
    :align: center
    :alt: Fetching commit from an upstream repository to update a fork.
 
-   Fetching commit from an upstream repository to update a fork.
+   Fetching commits from an upstream repository to update a fork
 
 Where to go from here
 ~~~~~~~~~~~~~~~~~~~~~
