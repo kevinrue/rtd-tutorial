@@ -3,7 +3,7 @@ Developing production pipelines
 
 This guide describes how to obtain a copy of a production pipeline
 with the intention to edit it and contribute the changes back to the
-parent repository.
+upstream repository.
 To develop a whole new pipeline from scratch, refer to :doc:`/guides/template`.
 
 Production pipelines are subject to change over time,
@@ -28,7 +28,7 @@ where you will see a grey button :guilabel:`Fork` in the top-right corner of the
 This will generate a new repository on your personal account
 (or the one of your choosing).
 This is the repository you will use to work on the pipeline and prepare pull requests
-to the parent repository, and it contains the following files and sub-directories:
+to the upstream repository, and it contains the following files and sub-directories:
 
 ``.github/workflows/build.yml``
   Sub-directory that contains instructions for GitHub Action workflows.
@@ -152,9 +152,9 @@ of commands run during the GitHub Action workflow, and their outputs.
    it is entirely normal to occasionally run into build failures,
    as you test new code or bug fixes.
    However, it is crucial that you do every effort to restore a successful build,
-   as this is an absolute requirement to merge a pull request to the parent repository.
-   In doubt, contact the maintainer of the parent repository for help and advice
-   (e.g., open a Github issue on the parent repository).
+   as this is an absolute requirement to merge a pull request to the upstream repository.
+   In doubt, contact the maintainer of the upstream repository for help and advice
+   (e.g., open a Github issue on the upstream repository).
 
 Proposing changes
 ~~~~~~~~~~~~~~~~~
@@ -169,8 +169,8 @@ or a bug that you wish to fix, create a branch in your fork of the repository.
    If your ideas implement on the branch do not work out, you can simply remove the branch;
    this will discard your work on that one branch, keeping everything else nice and tidy.
    If you idea did produce code that is worth adding to the template of that pipeline,
-   you can open a GitHub pull request on the parent repository;
-   this will merge the updates on your branch to the main branch of the parent repository,
+   you can open a GitHub pull request on the upstream repository;
+   this will merge the updates on your branch to the main branch of the upstream repository,
    which you can subsequently pull into the main branch of your fork...
    before creating another branch to work on another new feature!
 
@@ -216,7 +216,7 @@ instead, navigate back to the main page of your fork.
    Opening a pull request between a fork and an upstream repository
 
 This will take you to pull request between the branch in your repository
-and the main branch of the parent repository.
+and the main branch of the upstream repository.
 
 .. figure:: /_static/images/guides/fork-pr-form.png
    :width: 80%
@@ -238,13 +238,13 @@ and click the green button :guilabel:`Create pull request`.
    GitHub Action building the pull request
 
 After opening the pull request, one or more GitHub Action checks will appear
-(depending on the number of status checks that the parent repository has in place).
+(depending on the number of status checks that the upstream repository has in place).
 A yellow icon indicates that the workflow is running,
 while green or red icons indicate successful completion or failure, respectively.
 If you click on the :guilabel:`Details` link -- while it is running or after completion --
 you will access the build logs.
 
-When the status checks pass and the maintainer of the parent repository is satisfied,
+When the status checks pass and the maintainer of the upstream repository is satisfied,
 they will be able to merge the pull request.
 
 .. note::
@@ -255,7 +255,7 @@ they will be able to merge the pull request.
    to read in the future.
    
    Moreover, the "squash" part of the process collapses all the commits on the
-   branch proposing the changes into a single commit on the parent repository.
+   branch proposing the changes into a single commit on the upstream repository.
    Again, this will make it a lot easier to read, summarised, and interpret changes
    brought in by individual pull requests without navigating a large number of commits.
    It also makes it easier to revert the changes brought in by a pull request,
@@ -269,7 +269,7 @@ they will be able to merge the pull request.
    Deleting a branch after a pull request
 
 When the pull request is merged, 
-navigate to the page of the pull request on the parent repository
+navigate to the page of the pull request on the upstream repository
 and click on the :guilabel:`Delete branch` button
 to delete the branch from your repository.
 
@@ -282,17 +282,17 @@ to delete the branch from your repository.
 Updating your fork
 ~~~~~~~~~~~~~~~~~~
 
-Having merged the pull request to the main branch of the parent repository,
+Having merged the pull request to the main branch of the upstream repository,
 your own fork is now out of date as the changes do not automatically propagate
 to the main branch of your fork.
 This is also the case when pull requests made by other contributors are merged
-to the parent repository.
-It is always a good idea to check whether the parent repository has been updated
+to the upstream repository.
+It is always a good idea to check whether the upstream repository has been updated
 since your last visit, every time that you work on your fork.
 
-To bring the latest updates from the parent repository into your fork:
+To bring the latest updates from the upstream repository into your fork:
 
-* Navigate to the main page of the parent repository
+* Navigate to the main page of your fork.
 * Click the dropdown menu :guilabel:`Fetch upstream`.
 * In the modal that appears, if your fork is out of date,
   you will see a green button :guilabel:`Fetch and merge`.
@@ -312,9 +312,9 @@ This is the end of the guide.
 You started by making a fork of the production pipeline as a new repository on GitHub,
 created a branch to work on a feature or a bug fix,
 and made a pull request that passed continuous integration before being merged
-by the maintainer of the parent repository.
+by the maintainer of the upstream repository.
 Then you deleted your branch and fetched the updated code
-from the parent repository into your fork.
+from the upstream repository into your fork.
 
 More resources will be added shortly to this documentation to continue learning
 about the Sims-lab pipelines:
