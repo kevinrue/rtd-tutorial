@@ -224,6 +224,8 @@ and are processed extremely quickly in the various pipeline steps.
    * Avoid redundant disk usage for files that are used in multiple projects.
    * Create an opportunity to give symbolic links human-readable names often friendlier
      than the original file names (e.g., FASTQ files produced by sequencing facilities).
+   * If accidentally commited to Git, symbolic links are extremely small files,
+     that will not any significant issue in the Git repository.
 
 In this case, the pipeline requires gene annotations and sequencing reads in gzip-compressed file formats.
 However, we provide those file uncompressed for readability on the GitHub repository, thanks to their small file size.
