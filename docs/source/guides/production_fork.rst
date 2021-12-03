@@ -272,3 +272,9 @@ When the pull request is merged,
 navigate to the page of the pull request on the parent repository
 and click on the :guilabel:`Delete branch` button
 to delete the branch from your repository.
+
+.. note::
+
+   Once a branch is merged, it does not have any more value to keep around,
+   and only clutters your own repository, making it increasingly difficult
+   to identify branches that you are actively working on.
