@@ -41,6 +41,15 @@ and it contains the following files and sub-directories:
   that is derived from the template (e.g., download test files,
   name of the Conda environment).
 
+``config/``
+  Sub-directory that contains configuration files for controlling
+  the execution of the pipeline.
+  Configurable settings may range from options passed on to programs
+  called in individual tasks, to tabulated metadata about input files.
+  You will edit and add files in that folder as you develop the pipeline,
+  to provide a template and default values that can be edited by users
+  for each run of the pipeline.
+
 ``envs/``
   Sub-directory that contains YAML files describing Conda environments
   for running or testing the pipeline.
@@ -52,15 +61,13 @@ and it contains the following files and sub-directories:
   Sub-directory that contains additional files needed specifically 
   for continuous integration, you will leave it untouched.
 
+``.gitignore``
+  Git configuration file used to ignore files to stage and commit,
+  you will leave it untouched.
+
 ``README.md``
   Basic description of the repository.
   You will edit it as you see fit.
-
-``config.yml``
-  YAML file that is used to configure parameters of the pipeline.
-  You will edit this file as you develop the pipeline,
-  to provide a template and default values that can be edited by users
-  for each run of the pipeline.
 
 ``pipeline.py``
   Python script that describes the pipeline steps and overall workflow.

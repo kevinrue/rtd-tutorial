@@ -47,6 +47,14 @@ and it contains the following files and sub-directories:
   Sub-directory that contains instructions for GitHub Action workflows,
   you will leave it untouched.
 
+``config/``
+  Sub-directory that contains configuration files for controlling
+  the execution of the pipeline.
+  Configurable settings may range from options passed on to programs
+  called in individual tasks, to tabulated metadata about input files.
+  You will edit and add files in that folder with values suited to your own situation,
+  before running the pipeline.
+
 ``data/``
   Sub-directory where you will download the input FASTQ files for this guide.
   In your own projects, we recommend create symbolic links in this folder,
@@ -59,6 +67,10 @@ and it contains the following files and sub-directories:
   You will only used those files as input to create the necessary
   Conda environment on the system where you will run the pipeline.
 
+``.gitignore``
+  Git configuration file used to ignore files to stage and commit,
+  you will leave it untouched.
+
 ``etc/``
   Sub-directory that contains additional files needed specifically 
   for continuous integration, you will leave it untouched.
@@ -66,12 +78,6 @@ and it contains the following files and sub-directories:
 ``README.md``
   Basic description of the repository.
   You will edit it as you see fit.
-
-``config.yml``
-  YAML file that is used to configure parameters of the pipeline.
-  The file is included with example values.
-  You will edit this file with values suited to your own situation,
-  before running the pipeline.
 
 ``pipeline.py``
   Python script that describes the pipeline steps and overall workflow,
