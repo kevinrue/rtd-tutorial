@@ -36,6 +36,15 @@ to the upstream repository, and it contains the following files and sub-director
   occasionally update it with fixes, or to add new custom steps
   (e.g., download additional test input files to test new steps in the pipeline).
 
+``config/``
+  Sub-directory that contains configuration files for controlling
+  the execution of the pipeline.
+  Configurable settings may range from options passed on to programs
+  called in individual tasks, to tabulated metadata about input files.
+  You will update files in that folder with values that match your updates to the pipeline.
+  Updates range from editing existing values, to adding or removing fields
+  that control new or deprecated parameters of the pipeline controlled by users.
+
 ``data/``
   Sub-directory where users will download the input FASTQ files for this guide.
   In most cases, you will leave this untouched, as the pipeline is automatically
@@ -60,16 +69,13 @@ to the upstream repository, and it contains the following files and sub-director
   to verify that all the expected files are present at the end of the pipeline run
   during the GitHub Action.
 
+``.gitignore``
+  Git configuration file used to ignore files to stage and commit,
+  you will leave it untouched.
+
 ``README.md``
   Basic description of the repository.
   You will edit it as you see fit.
-
-``config.yml``
-  YAML file that is used to configure parameters of the pipeline.
-  The file is included with example values.
-  You will update this file with values that match your updates to the pipeline.
-  Updates range from editing existing values, to adding or removing fields
-  that control new or deprecated parameters of the pipeline controlled by users.
 
 ``pipeline.py``
   Python script that describes the pipeline steps and overall workflow.

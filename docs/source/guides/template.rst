@@ -61,6 +61,10 @@ and it contains the following files and sub-directories:
   Sub-directory that contains additional files needed specifically 
   for continuous integration, you will leave it untouched.
 
+``.gitignore``
+  Git configuration file used to ignore files to stage and commit,
+  you will leave it untouched.
+
 ``README.md``
   Basic description of the repository.
   You will edit it as you see fit.
