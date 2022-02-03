@@ -264,7 +264,7 @@ Thus, we need to use the ``gzip`` program to decompress the file:
    stored in separate directories, for discoverability and re-use across projects.
    For instance, many high-performance computing (HPC) clusters arrange shared folders
    providing mirrored files for gene annotations and reference genome sequences.
-   It is also possible to create a sub-directory net to the ``data/`` sub-directory
+   It is also possible to create a sub-directory next to the ``data/`` sub-directory
    (e.g. ``resources/``), to store those files within the repository of the project itself.
    Do be careful not to commit those large files to the Git repository though!
 
