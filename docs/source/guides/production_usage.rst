@@ -214,8 +214,10 @@ and are processed extremely quickly in the various pipeline steps.
       https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/hisat2_chr22.8.ht2 \
       https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_01_1.fastq \
       https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_01_2.fastq \
-      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_02_1.fastq \
-      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_02_2.fastq \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_02_part1_1.fastq \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_02_part1_2.fastq \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_02_part2_1.fastq \
+      https://github.com/sims-lab/simulated_ngs_datasets/raw/files/human.chr22.genes2/outputs/simulated_reads/sample_02_part2_2.fastq \
       -P data
 
 .. note::
@@ -242,8 +244,10 @@ Thus, we need to use the ``gzip`` program to compress the relevant files:
    gzip \
       data/sample_01_1.fastq \
       data/sample_01_2.fastq \
-      data/sample_02_1.fastq \
-      data/sample_02_2.fastq \
+      data/sample_02_part1_1.fastq \
+      data/sample_02_part1_2.fastq \
+      data/sample_02_part2_1.fastq \
+      data/sample_02_part2_2.fastq \
       data/chr22.genes2.gtf
 
 Conversely, the pipeline requires the reference genome sequence in plain text -- i.e., uncompressed -- FASTA format.
